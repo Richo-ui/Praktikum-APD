@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="postest2"/>
+        <attribute name="authors" value="RICHO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-18 05:45:47 PM"/>
+        <attribute name="created" value="UklDSE87TEFQVE9QLThNQzVJVDk1OzIwMjQtMDktMTg7MTI6MTA6MTkgUE07MjY4Ng=="/>
+        <attribute name="edited" value="UklDSE87TEFQVE9QLThNQzVJVDk1OzIwMjQtMDktMTg7MDU6NDU6NDcgUE07MzsyODA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nama" type="String" array="False" size=""/>
+            <output expression="&quot;Masukkan Nama Anda&quot;" newline="True"/>
+            <input variable="nama"/>
+            <declare name="umur" type="Integer" array="False" size=""/>
+            <output expression="&quot;Masukkan Umur Anda&quot;" newline="True"/>
+            <input variable="umur"/>
+            <declare name="tinggi" type="Real" array="False" size=""/>
+            <output expression="&quot;Masukkan Tinggi Badan Anda&quot;" newline="True"/>
+            <input variable="tinggi"/>
+            <declare name="status" type="Boolean" array="False" size=""/>
+            <output expression="&quot;Apakah Anda Seorang Mahasiswa? (True/False)&quot;" newline="True"/>
+            <input variable="status"/>
+            <declare name="total" type="Real" array="False" size=""/>
+            <assign variable="total" expression="umur + tinggi"/>
+            <if expression="status">
+                <then>
+                    <output expression="&quot;====================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Biodata&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;====================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Nama&quot;&amp; &quot;:&quot;&amp; nama&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Umur&quot;&amp; &quot;:&quot;&amp; umur&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Tinggi Badan&quot;&amp; &quot;:&quot;&amp; tinggi&amp; &quot;cm&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Status Mahasiswa&quot;&amp; &quot;:&quot;&amp; status&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;====================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Total int + float&quot;&amp; &quot;:&quot;&amp; total" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;====================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Biodata&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;====================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Nama&quot;&amp; &quot;:&quot;&amp; nama&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Umur&quot;&amp; &quot;:&quot;&amp; umur&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Tinggi Badan&quot;&amp; &quot;:&quot;&amp; tinggi&amp; &quot;cm&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Status Mahasiswa&quot;&amp; &quot;:&quot;&amp; status&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;====================&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Total int + float&quot;&amp; &quot;:&quot;&amp; total" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
