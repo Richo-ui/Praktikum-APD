@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="diskon"/>
+        <attribute name="authors" value="RICHO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-11 12:26:22 AM"/>
+        <attribute name="created" value="UklDSE87TEFQVE9QLThNQzVJVDk1OzIwMjQtMDktMDg7MTI6MzY6NTkgUE07MjY5Nw=="/>
+        <attribute name="edited" value="UklDSE87TEFQVE9QLThNQzVJVDk1OzIwMjQtMDktMTE7MTI6MjY6MjIgQU07MjsyNzc0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="total, diskon, akhir" type="Integer" array="False" size=""/>
+            <input variable="total"/>
+            <if expression="total &gt;= 1000000">
+                <then>
+                    <assign variable="diskon" expression="total * 20 / 100"/>
+                </then>
+                <else>
+                    <if expression="total &gt;= 500000">
+                        <then>
+                            <assign variable="diskon" expression="total * 10 / 100"/>
+                        </then>
+                        <else>
+                            <if expression="total &gt;= 100000">
+                                <then>
+                                    <assign variable="diskon" expression="total * 5 / 100"/>
+                                </then>
+                                <else>
+                                    <assign variable="diskon" expression="0"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="akhir" expression="total - diskon"/>
+            <output expression="akhir" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
