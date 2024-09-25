@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="coba"/>
+        <attribute name="authors" value="RICHO"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-09-25 06:16:18 PM"/>
+        <attribute name="created" value="UklDSE87TEFQVE9QLThNQzVJVDk1OzIwMjQtMDktMjI7MTI6MjQ6MjYgUE07MjY4NA=="/>
+        <attribute name="edited" value="UklDSE87TEFQVE9QLThNQzVJVDk1OzIwMjQtMDktMjU7MDY6MTY6MTggUE07ODsyODA3"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="pilihan1, pilihan2, sisi, luas, volume, panjang, lebar, tinggi, diameter, jari2, pelukis" type="Integer" array="False" size=""/>
+            <output expression="&quot;Menu Program&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;Menghitung luas/volume bangun ruang&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;1.kubus&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;2. balok&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;3. tabung&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;4. kerucut&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;0. keluar&quot;" newline="True"/>
+            <output expression="&quot;Masukkan pilihan Anda&quot;" newline="True"/>
+            <input variable="pilihan1"/>
+            <if expression="pilihan1 = 1">
+                <then>
+                    <output expression="&quot;Apa yang ingin anda cari:&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;1. luas kubus&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;2. volume kubus&quot;" newline="True"/>
+                    <output expression="&quot;Masukkan pilihan Anda&quot;" newline="True"/>
+                    <input variable="pilihan2"/>
+                    <if expression="pilihan2 = 1">
+                        <then>
+                            <output expression="&quot;Luas Kubus&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;6 x sisi x sisi&quot;" newline="True"/>
+                            <output expression="&quot;Masukkan sisi kubus&quot;" newline="True"/>
+                            <input variable="sisi"/>
+                            <assign variable="luas" expression="6 * sisi * sisi"/>
+                            <output expression="&quot;Luas kubus&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;luas" newline="True"/>
+                        </then>
+                        <else>
+                            <output expression="&quot;Volume kubus&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;sisi x sisi x sisi&quot;" newline="True"/>
+                            <output expression="&quot;Masukkan sisi kubus&quot;" newline="True"/>
+                            <input variable="sisi"/>
+                            <assign variable="volume" expression="sisi * sisi * sisi"/>
+                            <output expression="&quot;Volume kubus&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;volume" newline="True"/>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <if expression="pilihan1 = 2">
+                        <then>
+                            <output expression="&quot;apa yang ingin anda cari:&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;1. Luas balok&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;2. Volume balok&quot;" newline="True"/>
+                            <output expression="&quot;Masukkan pilihan Anda&quot;" newline="True"/>
+                            <input variable="pilihan2"/>
+                            <if expression="pilihan2 = 1">
+                                <then>
+                                    <output expression="&quot;Luas balok&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;2 x (panjang x lebar + panjang x tinggi + lebar x tinggi)&quot;" newline="True"/>
+                                    <output expression="&quot;Masukkan panjang:&quot;" newline="True"/>
+                                    <input variable="panjang"/>
+                                    <output expression="&quot;Masukkan lebar:&quot;" newline="True"/>
+                                    <input variable="lebar"/>
+                                    <output expression="&quot;Masukkan tinggi:&quot;" newline="True"/>
+                                    <input variable="tinggi"/>
+                                    <assign variable="luas" expression="2 * (panjang * lebar + panjang * tinggi + lebar * tinggi)"/>
+                                    <output expression="&quot;Luas balok:&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;luas" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;volume balok&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;panjang x lebar x tinggi&quot;" newline="True"/>
+                                    <output expression="&quot;Masukkan panjang:&quot;" newline="True"/>
+                                    <input variable="panjang"/>
+                                    <output expression="&quot;Masukkan lebar:&quot;" newline="True"/>
+                                    <input variable="lebar"/>
+                                    <output expression="&quot;Masukkan tinggi:&quot;" newline="True"/>
+                                    <input variable="tinggi"/>
+                                    <assign variable="luas" expression="2 * (panjang * lebar + panjang * tinggi + lebar * tinggi)"/>
+                                    <output expression="&quot;Luas balok:&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;luas" newline="True"/>
+                                </else>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="pilihan1 = 3">
+                                <then>
+                                    <declare name="jari1" type="String" array="False" size=""/>
+                                    <output expression="&quot;Apa yang ingin anda cari :&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;1. Luas tabung&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;2. Volume tabung&quot;" newline="True"/>
+                                    <output expression="&quot;Masukkan pilihan Anda&quot;" newline="True"/>
+                                    <input variable="pilihan2"/>
+                                    <if expression="pilihan2 = 1">
+                                        <then>
+                                            <output expression="&quot;Luas tabung&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;2 x &#960; x r (t + r)&quot;" newline="True"/>
+                                            <output expression="&quot;Apakah jari-jari diketahui (Ya/Tidak)&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;(Mohon menggunakan huruf Y kapital)&quot;" newline="True"/>
+                                            <input variable="jari1"/>
+                                            <if expression="jari1 = &quot;Ya&quot;">
+                                                <then>
+                                                    <output expression="&quot;Masukkan jari-jari&quot;" newline="True"/>
+                                                    <input variable="jari2"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Masukkan diameter&quot;" newline="True"/>
+                                                    <input variable="diameter"/>
+                                                    <assign variable="jari2" expression="diameter / 2"/>
+                                                </else>
+                                            </if>
+                                            <output expression="&quot;Masukkan tinggi&quot;" newline="True"/>
+                                            <input variable="tinggi"/>
+                                            <assign variable="luas" expression="2 * 22 / 7 * jari2 * (tinggi + jari2)"/>
+                                            <output expression="&quot;Luas tabung&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;luas" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <output expression="&quot;Volume tabung&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;&#960; x r x r x t&quot;" newline="True"/>
+                                            <output expression="&quot;Apakah jari-jari diketahui (Ya/Tidak)&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;(Mohon menggunakan huruf Y kapital)&quot;" newline="True"/>
+                                            <input variable="jari1"/>
+                                            <if expression="jari1 = &quot;Ya&quot;">
+                                                <then>
+                                                    <output expression="&quot;Masukkan jari-jari&quot;" newline="True"/>
+                                                    <input variable="jari2"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Masukkan diameter&quot;" newline="True"/>
+                                                    <input variable="diameter"/>
+                                                    <assign variable="jari2" expression="diameter / 2"/>
+                                                </else>
+                                            </if>
+                                            <output expression="&quot;Masukkan tinggi&quot;" newline="True"/>
+                                            <input variable="tinggi"/>
+                                            <assign variable="volume" expression="22 / 7 * jari2 * jari2 * tinggi"/>
+                                            <output expression="&quot;Volume tabung&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;volume" newline="True"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else>
+                                    <if expression="pilihan1 = 4">
+                                        <then>
+                                            <declare name="jari1" type="String" array="False" size=""/>
+                                            <output expression="&quot;Apa yang ingin anda cari :&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;1. Luas kerucut&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;2. Volume kerucut&quot;" newline="True"/>
+                                            <output expression="&quot;Masukkan pilihan Anda&quot;" newline="True"/>
+                                            <input variable="pilihan2"/>
+                                            <if expression="pilihan2 = 1">
+                                                <then>
+                                                    <output expression="&quot;Luas kerucut&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;&#960; x r (r + s)&quot;" newline="True"/>
+                                                    <output expression="&quot;Apakah jari-jari diketahui (Ya/Tidak)&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;(Mohon menggunakan huruf Y kapital)&quot;" newline="True"/>
+                                                    <input variable="jari1"/>
+                                                    <if expression="jari1 = &quot;Ya&quot;">
+                                                        <then>
+                                                            <output expression="&quot;Masukkan jari-jari&quot;" newline="True"/>
+                                                            <input variable="jari2"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Masukkan diameter&quot;" newline="True"/>
+                                                            <input variable="diameter"/>
+                                                            <assign variable="jari2" expression="diameter / 2"/>
+                                                        </else>
+                                                    </if>
+                                                    <output expression="&quot;Masukkan garis pelukis&quot;" newline="True"/>
+                                                    <input variable="pelukis"/>
+                                                    <assign variable="luas" expression="22 / 7 * jari2 * (pelukis + jari2)"/>
+                                                    <output expression="&quot;Luas kerucut&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;luas &amp; &quot;cm&#178;&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Volume kerucut&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;1/2 x &#960; x r x r x t&quot;" newline="True"/>
+                                                    <output expression="&quot;Apakah jari-jari diketahui (Ya/Tidak)&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;&quot;(Mohon menggunakan huruf Y kapital)&quot;" newline="True"/>
+                                                    <input variable="jari1"/>
+                                                    <if expression="jari1 = &quot;Ya&quot;">
+                                                        <then>
+                                                            <output expression="&quot;Masukkan jari-jari&quot;" newline="True"/>
+                                                            <input variable="jari2"/>
+                                                        </then>
+                                                        <else>
+                                                            <output expression="&quot;Masukkan diameter&quot;" newline="True"/>
+                                                            <input variable="diameter"/>
+                                                            <assign variable="jari2" expression="diameter / 2"/>
+                                                        </else>
+                                                    </if>
+                                                    <output expression="&quot;Masukkan tinggi&quot;" newline="True"/>
+                                                    <input variable="tinggi"/>
+                                                    <assign variable="volume" expression="1 / 2 * 22 / 7 * jari2 * jari2 * tinggi"/>
+                                                    <output expression="&quot;Volume kerucut&quot;&amp;&#13;&#10;ToChar(13)&amp;&#13;&#10;volume&amp; &quot;cm&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else>
+                                            <if expression="pilihan1 = 0">
+                                                <then>
+                                                    <output expression="&quot;Keluar dari Program&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;Masukkan nomor yang benar dongg :( &quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
